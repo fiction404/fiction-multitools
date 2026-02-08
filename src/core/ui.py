@@ -60,8 +60,12 @@ class UI:
         print(f"{Colors.BLUE}[*] {message}{Colors.RESET}")
 
     @staticmethod
-    def ask():
+    def cmd():
         user = getpass.getuser() 
         pwd = pathlib.Path.cwd()
         return input(f"""{Colors.GREEN}┌──({Colors.RED}{user}@Fiction{Colors.GREEN}─[{Colors.BLUE}{pwd}{Colors.GREEN}]{Colors.RESET}
 {Colors.GREEN}└─{Colors.RED}$ {Colors.RESET}""")
+    
+    @staticmethod
+    def ask(msg):
+        return input(f"{Colors.GREEN}{msg}{Colors.RESET}")
