@@ -5,7 +5,7 @@ from core.ui import UI
 class PortScanner(Tool):
     @property
     def name(self):
-        return "Scanner de Port"
+        return "PortScanner"
 
     @property
     def description(self):

@@ -40,8 +40,8 @@ class UI:
 
     @staticmethod
     def print_menu(options):
-        for i, option in enumerate(options, 1):
-            print(f"{Colors.GREEN}[{i}] {option}{Colors.RESET}")
+        for i, option in enumerate(options, 0):
+            print(f"{Colors.GREEN}[{Colors.RED}{i}{Colors.GREEN}] {Colors.CYAN}{option}{Colors.RESET}")
 
     @staticmethod
     def print_warning(message):
