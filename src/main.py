@@ -64,7 +64,7 @@ def build_menu_items(tools: List[Tool]) -> List[str]:
 
 def run_cli(modules_dir: str | None = None) -> None:
     config = ConfigManager()
-    UI.banner()
+    UI.banner(config.get("info"))
 
     if config.get("error"):
         try:
@@ -83,7 +83,7 @@ def run_cli(modules_dir: str | None = None) -> None:
             continue
 
         if command in ("clear", "2"):
-            UI.banner()
+            UI.banner(config.get("info"))
             continue
 
         if command in ("exit", "0"):

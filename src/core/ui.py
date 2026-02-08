@@ -18,7 +18,7 @@ class UI:
         os.system('cls' if os.name == 'nt' else 'clear')
 
     @staticmethod
-    def banner():
+    def banner(config_info=None):
         banner="""  
  ███████████  ███            █████     ███                     
 ░░███░░░░░░█ ░░░            ░░███     ░░░                      
@@ -34,7 +34,7 @@ class UI:
         UI.clear()
         print(f"{Colors.CYAN}")
         print(banner)
-        print(f"{Colors.BOLD} v0.0 - Full Standard Lib{Colors.RESET}\n")
+        print(f"{Colors.BOLD} v{config_info.get('version')} - Full Standard Lib{Colors.RESET}\n")
         print(f"{Colors.GREEN}Ecrire 'help' pour afficher les commandes disponibles.\n{Colors.RESET}")
         
 
