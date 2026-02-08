@@ -6,7 +6,7 @@ from core.ui import UI
 class PasswordGenerator(Tool):
     @property
     def name(self):
-        return "Générateur de MDP"
+        return "PasswordGenerator"
 
     @property
     def description(self):
@@ -24,11 +24,9 @@ class PasswordGenerator(Tool):
             UI.print_error("C'est trop court pour être sécurisé !")
             return
 
-        # On définit les caractères possibles
         chars = string.ascii_letters + string.digits + "!@#$%^&*"
         
-        # On génère le mot de passe
         password = "".join(random.choice(chars) for _ in range(length))
         
         UI.print_success("Mot de passe généré :")
-        print(f"\n    {password}\n") # Affichage centré visuellement
+        print(f"\n    {password}\n") 

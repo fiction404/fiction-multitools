@@ -51,9 +51,9 @@ def load_modules(modules_dir: str | None = None) -> List[Tool]:
 
 def build_menu_items(tools: List[Tool]) -> List[str]:
     items = [
+        "exit  - Quitter l'application",
         "help  - Afficher ce menu d'aide",
         "clear - Effacer l'écran",
-        "exit  - Quitter l'application",
     ]
 
     for tool in tools:
@@ -86,13 +86,13 @@ def run_cli(modules_dir: str | None = None) -> None:
             UI.banner()
             continue
 
-        if command in ("exit", "3"):
+        if command in ("exit", "0"):
             UI.print_success("Au revoir !")
             break
 
         if command.isdigit():
             choice = int(command)
-            tool_index = choice - 4
+            tool_index = choice - 3
             if 0 <= tool_index < len(tools):
                 try:
                     tools[tool_index].execute()

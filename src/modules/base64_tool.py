@@ -5,7 +5,7 @@ from core.ui import UI
 class Base64Tool(Tool):
     @property
     def name(self):
-        return "Encodeur/Décodeur Base64"
+        return "Base64Tool"
 
     @property
     def description(self):
